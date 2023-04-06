@@ -10,5 +10,5 @@ ReactDOM.render(
     <AlertManager />
     <MainPage />
   </AlertHandlerProvider>,
-  document.getElementById("app")
+  document.getElementById("root")
 );

@@ -12,13 +12,17 @@ const TodoCard = () => {
   const onAddTaskButtonClick = () => {
     const newTask = {
       name: "",
+      state: "TODO",
       initializing: true,
     };
     setTaskList(taskList.concat(newTask));
   };
 
   const onTaskComplete = (index) => {
-    let newTaskList = taskList.filter((_, idx) => idx != index);
+    let newTaskList = taskList.map((task, idx) => {
+      if (idx == index) task.state = "DONE";
+      return task;
+    });
     setTaskList(newTaskList);
   };
 
@@ -29,6 +33,7 @@ const TodoCard = () => {
       AlertHandlerContext.setAlert("タスクの名前が設定されていません。");
     } else {
       newTaskList.splice(index, 1, {
+        state: taskList[index].state,
         name: value,
         initializing: false,
       });
@@ -50,15 +55,18 @@ const TodoCard = () => {
     <StyledWrapper>
       <AddTaskButton onClick={onAddTaskButtonClick} />
       <StyledTaskList>
-        {taskList.map((task, index) => (
-          <Task
-            key={index}
-            onTaskComplete={() => onTaskComplete(index)}
-            onTaskNameChange={(value) => onTaskNameChange(value, index)}
-            taskName={task.name}
-            defaultIsEditing={task.initializing}
-          />
-        ))}
+        {taskList.map(
+          (task, index) =>
+            task.state === "TODO" && (
+              <Task
+                key={index}
+                onTaskComplete={() => onTaskComplete(index)}
+                onTaskNameChange={(value) => onTaskNameChange(value, index)}
+                taskName={task.name}
+                defaultIsEditing={task.initializing}
+              />
+            )
+        )}
       </StyledTaskList>
     </StyledWrapper>
   );
