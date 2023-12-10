@@ -145,19 +145,18 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  gap: 20px;
 
   @media (min-width: ${breakpoint.Z.MEDIUM}) {
     padding-top: 60px;
   }
 `,StyledTodoCardWrapper=styled_components_browser_esm.ZP.div`
   width: 100%;
-  margin-top: 10px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: ${breakpoint.Z.MEDIUM}) {
     max-width: 500px;
-    margin-top: 20px;
   }
 `,story={component:Pages_MainPage,title:"Pages/MainPage",parameters:{backgrounds:{default:"dark"}}},Template=args=>(0,jsx_runtime.jsx)(Pages_MainPage,{...args});Template.displayName="Template";const Default=Template.bind({});Default.args={},Default.decorators=[Story=>(0,jsx_runtime.jsx)("div",{children:(0,jsx_runtime.jsx)(Story,{})})];const WithAlert=Template.bind({});WithAlert.args={},WithAlert.decorators=[Story=>(0,jsx_runtime.jsx)("div",{children:(0,jsx_runtime.jsxs)(alert_handler.LE,{children:[(0,jsx_runtime.jsx)(Organisms_AlertManager,{}),(0,jsx_runtime.jsx)(Story,{})]})})]},"./src/variables/breakpoint.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Z:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__={MEDIUM:"768px"}},"./src/variables/color.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Z:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__={BLACK:"#232324",LIGHT_BLACK:"#2B2A2E",DEEP_BLUE_GRAY:"#2F3136",LIGHT_GRAY:"#B8B8B8",LIGHT_GRAY_TRANSLUCENT:"rgba(184,184,184,0.2)",LIGHT_GRAY_TRANSPARENT:"rgba(0,0,0,0)",WHITE:"#FFFFFF",GREEN:"#46A381",GREEN_TRANSLUCENT:"rgba(70,163,129,0.2)",GREEN_TRANSPARENT:"rgba(0,0,0,0)",RED:"#F0947F"}},"./src/variables/texts.js":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{__webpack_require__.d(__webpack_exports__,{Z:()=>__WEBPACK_DEFAULT_EXPORT__});const __WEBPACK_DEFAULT_EXPORT__={S:"font-size: 14px; line-height: 20px;",M:"font-size: 24px; line-height: 35px;",L:"font-size: 36px; line-height: 52px;"}}}]);
-//# sourceMappingURL=components-Pages-MainPage-story.9dcd3941.iframe.bundle.js.map
+//# sourceMappingURL=components-Pages-MainPage-story.d4a26531.iframe.bundle.js.map
